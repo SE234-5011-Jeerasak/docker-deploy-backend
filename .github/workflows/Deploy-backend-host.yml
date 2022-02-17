@@ -48,7 +48,7 @@ jobs:
       name: prepare the docker-compose run
       run: |
             mkdir deploylab-backend
-            cp docker-compose.yml deploylab-backed/docker-compose.yml
+            cp docker-compose.yml deploylab-backend/docker-compose.yml
             cd deploylab-backend
             docker-compose -H ${{ secrets.HOST_SERVER }} down -remove-orphans
             docker-compose -H ${{ secrets.HOST_SERVER }} pull
